@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body class="bg-dark text-white">
+        <div class="container bg-dark text-white">
+
+            <ul class="nav d-flex justify-content-center">
+                <li class="nav-item">
+            
+                    <a class="btn nav-link" id="navCadastrar">Cadastrar</a>
+                    
+                </li>
+                <li class="nav-item">
+                    
+                    <a class="btn nav-link"  id="navConsultar">Consultar</a>
+                    
+                </li>
+            </ul> 
+        </div>
+        <div class="container  bg-dark text-white" id="telaCadastro">
+            
+            
+            <div class="row">
+                <div class="col">
+                    <p class="fs-3 text-center">Cadastre-se</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="offset-md-1 col-md-5 col-sm-12  my-auto mr-3 ml-3 ">
+                    <div class="m-3 p-md ">
+                        <img src="images/imgcadastro.png" class="img-fluid rounded float-start">
+                    </div>
+                </div>        
+                
+                <div class="col-md-5 col-sm-12 mt-4">
+                    
+                    <form id="formulario"> 
+                        
+                        <div class="row">
+                            
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="nome" class="form-label">Nome (Completo)</label>
+                                    <input type="text" class="form-control" id="nome" required="required" pattern="[a-zA-Z\s]+$"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required="required" >
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-12">
+                                <div class="mb-3">
+                                    <label for="cpf" class="form-label">CPF</label>
+                                    <input type="text" class="form-control" id="cpf" required="required" >
+                                </div>  
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <div class="mb-3">
+                                    <label for="celular" class="form-label">Celular</label> 
+                                    <input type="text" class="form-control" id="celular" required="required"  > 
+                                </div>  
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <div class="mb-3">
+                                    <label for="dataNascimento" id="labelNascimento" class="form-label">Data de Nascimento</label>
+                                    <input type="date" class="form-control" id="nascimento" required="required">
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="endereco" class="form-label" >Endereço</label>
+                                    <input type="text" class="form-control" id="endereco" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3 ">
+                                    <label for="observacao" class="form-label">Observação</label>
+                                    <textarea rows="3" class="form-control" id="observacao" ></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col d-grid">
+                                <button class="btn btn-primary" id="salvar">Salvar</button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col d-grid">
+                                <button class="btn btn-primary mt-2" id="novoCadastro">Novo Cadastro</button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col d-grid">
+                                <button class="btn btn-warning" id="editar">Editar</button>
+                            </div>
+                        </div>
+                        
+                    </form>
+        
+                    
+                </div>
+            </div>
+            
+        </div>
+        <div class="container  bg-dark text-white " id="telaConsulta" hidden>
+            <div class="row ">
+                <div class="col-md-6 col-sm-12 mt-3">
+                    <div class="mb-3">                      
+                        <input type="text" class="form-control" id="busca" >
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 mt-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-check">
+                                <label class="form-check-label" for="radio1">
+                                    Email
+                                  </label>
+                                <input value="email"class="form-check-input" type="radio" name="tipoBusca" id="radio1">
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="form-check">
+                                <label class="form-check-label" for="radio2">
+                                    Nome
+                                  </label>
+                                <input value="nome" class="form-check-input" type="radio" name="tipoBusca" id="radio2" checked>                      
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-3 col-sm-12 mt-3">
+                    <div class="d-grid"> 
+                        <button class="btn btn-primary" id="btnBuscar" >Buscar</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <table class="table table-light col-md-6 col-sm-12 mt-3" >
+                        <thead>
+                          <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">CPF</th>
+                            <th scope="col">Celular</th>
+                            <th scope="col">Nascimento</th>
+                            <th scope="col">Endereço</th>
+                            <th scope="col">Observação</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody class="col-md-6 col-sm-12 mt-3" id="tabela">
+                          
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+
+            <div class="modal fade " id="excluiModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                      <h5 class="modal-title" >Deseja Realmente Excluir o Usuário?</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">                       
+                      <p id="usuarioExclusao"> </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="excluirUsuario">Excluir</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+            
+              
+    </body>
+
+    <script src="script.js"></script>
+    <style>
+        .trocaCor::-webkit-input-placeholder {
+    color: red
+    }
+    
+    </style>
+    
+</html>

@@ -1,0 +1,15 @@
+1- Recomendo que baixem o XAMP  https://www.apachefriends.org/pt_br/index.html (Para rodar o apache e o mysql de forma simples) ;
+2- Recomendo que desmarque os servers FileZilla, Mercury, Tomcat durante a instalação.
+3- Abra o aplicativo e clique no botão 'Start' do Apache e do Mysql(Mantenha o app aberto).
+4- Abra o disco local de seu computador e vá até o local em que foi instalado o xampp(caso não tenha sido alterado fica no disco padrão )
+5- Siga os caminhos xampp -> htdocs ->
+6- Crie uma pasta com o nome 'app' ou  qualquer nome.
+7- Insira todos os arquivos do .zip enviado dentro da pasta criada.
+8- Volte para o XamppApp
+9- Clique em admin na coluna do Mysql e após isso sera aberto o phpmyadmin em seu navegador.
+10- Olhe para  canto superior esquerdo e clique em +Novo (primeiro icone da lista pequena)
+11- Clique no botão 'importar' que esta fixado  topo-centro da pagina.
+12- Escolha o arquivo "cadastro " (foi enviado junto com os outros arquivos do .zip)
+13- Agora abra uma aba em seu navegador e digite  : http://localhost/nomeDaPastaCriadaNoPasso06/
+
+Link do site online : https://newmproject.000webhostapp.com/
